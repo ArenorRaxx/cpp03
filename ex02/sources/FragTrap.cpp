@@ -6,7 +6,7 @@
 /*   By: nikoraxx <nikoraxx@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 16:47:15 by nikoraxx          #+#    #+#             */
-/*   Updated: 2023/02/06 13:35:35 by nikoraxx         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:14:11 by nikoraxx         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,17 @@ FragTrap::~FragTrap(void)
 FragTrap::FragTrap(FragTrap const &to_copy): ClapTrap(to_copy)
 {
 	std::cout << "FragTrap " << this->_name << ": Copy constructor called with " << to_copy._name << ".\n";
+	*this = to_copy;
 }
 
 FragTrap &FragTrap::operator = (FragTrap const &to_set_to)
 {
 	std::cout << "FragTrap " << this->_name << ": Assignation constructor called with " << to_set_to._name << ".\n";
+	this->_name = to_set_to._name;
+	this->_max_lp = to_set_to._max_lp;
+	this->_life_points = to_set_to._life_points;
+	this->_mana = to_set_to._mana;
+	this->_attack_damage = to_set_to._attack_damage;
 	return (*this);
 }
 

@@ -6,14 +6,14 @@
 /*   By: nikoraxx <nikoraxx@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:55:06 by nikoraxx          #+#    #+#             */
-/*   Updated: 2023/02/06 13:20:55 by nikoraxx         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:12:30 by nikoraxx         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../heads/ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap(void): _max_lp(10) ,_life_points(10), _mana(10), _attack_damage(10)
+ClapTrap::ClapTrap(void): _max_lp(10) ,_life_points(10), _mana(10), _attack_damage(0)
 {
 	std::cout  << "ClapTrap Default constructor called.\n";
 }
@@ -33,6 +33,7 @@ ClapTrap &ClapTrap::operator = (ClapTrap const &to_set_to)
 {
 	std::cout  << "ClapTrap " << this->_name << ": Assignation constructor called with " << to_set_to._name << ".\n";
 	this->_name = to_set_to._name;
+	this->_max_lp = to_set_to._max_lp;
 	this->_life_points = to_set_to._life_points;
 	this->_mana = to_set_to._mana;
 	this->_attack_damage = to_set_to._attack_damage;

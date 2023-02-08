@@ -6,14 +6,14 @@
 /*   By: nikoraxx <nikoraxx@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:55:06 by nikoraxx          #+#    #+#             */
-/*   Updated: 2023/02/06 13:36:21 by nikoraxx         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:12:22 by nikoraxx         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../heads/ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap(void): _max_lp(10) ,_life_points(10), _mana(10), _attack_damage(10)
+ClapTrap::ClapTrap(void): _max_lp(10) ,_life_points(10), _mana(10), _attack_damage(0)
 {
 	std::cout  << "ClapTrap Default constructor called.\n";
 }

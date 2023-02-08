@@ -19,7 +19,7 @@
 class ClapTrap
 {
 	protected:
-		int const	_max_lp;
+		int			_max_lp;
 		int			_life_points;
 		int			_mana;
 		int			_attack_damage;
